@@ -1,20 +1,30 @@
-document.getElementById('Cash-Out').addEventListener('click', function(event) {
+// ============================
+// Cash Out Button Function
+// ============================
+
+document.getElementById('Cash-Out').addEventListener('click', function (event) {
   event.preventDefault();
 
-  const Money = document.getElementById('Cash-MoneyAdd').value;
-  const MoneyAdd = parseInt(Money);
+  const money = document.getElementById('Cash-MoneyAdd').value;
+  const moneyOut = parseInt(money);
   const pin = document.getElementById('Cash-Pin').value;
 
-  if(pin === "1234") {
-    console.log('Login Successful');
+  if (pin === "0000") {
     const balanceText = document.getElementById('amount').innerText;
-    const balance = parseInt(balanceText);  
-    const TotalAmount = balance - MoneyAdd;
-    console.log(TotalAmount);
+    const balance = parseInt(balanceText);
 
-    //  update the
-    document.getElementById('amount').innerText = TotalAmount;
+    if (moneyOut > balance) {
+      alert("Insufficient Balance");
+      return;
+    }
+
+    const totalAmount = balance - moneyOut;
+
+    // Update balance
+    document.getElementById('amount').innerText = totalAmount;
+    console.log("Money withdrawn:", moneyOut);
   } else {
     alert("Invalid Pin Number");
   }
 });
+

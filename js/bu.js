@@ -1,21 +1,23 @@
-document.getElementById('Add-Money').addEventListener('click', function(event) {
+// ============================
+// Add Money Button Function
+// ============================
+
+document.getElementById('Add-Money').addEventListener('click', function (event) {
   event.preventDefault();
 
-  const Money = document.getElementById('MoneyAdd').value;
-  const MoneyAdd = parseInt(Money);
+  const money = document.getElementById('MoneyAdd').value;
+  const moneyAdd = parseInt(money);
   const pin = document.getElementById('PinSet').value;
 
-  if(pin === "1234") {
-    console.log('Login Successful');
+  if (pin === "0000") {
     const balanceText = document.getElementById('amount').innerText;
-    const balance = parseInt(balanceText);  // number ey rupantor
-    const TotalAmount = balance + MoneyAdd;
-    console.log(TotalAmount);
+    const balance = parseInt(balanceText);
+    const totalAmount = balance + moneyAdd;
 
-    // If you want to update the balance on the page
-    document.getElementById('amount').innerText = TotalAmount;
+    // Update balance
+    document.getElementById('amount').innerText = totalAmount;
+    console.log("Money added:", moneyAdd);
   } else {
     alert("Invalid Pin Number");
   }
 });
-
