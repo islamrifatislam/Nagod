@@ -8,11 +8,11 @@ document.getElementById('Cash-Out').addEventListener('click', function(event) {
   if(pin === "1234") {
     console.log('Login Successful');
     const balanceText = document.getElementById('amount').innerText;
-    const balance = parseInt(balanceText);  // number ey rupantor
+    const balance = parseInt(balanceText);  
     const TotalAmount = balance - MoneyAdd;
     console.log(TotalAmount);
 
-    // If you want to update the balance on the page
+    //  update the
     document.getElementById('amount').innerText = TotalAmount;
   } else {
     alert("Invalid Pin Number");

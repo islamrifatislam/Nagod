@@ -7,58 +7,63 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="w-full">
   <main class="flex justify-center items-center min-h-screen bg-slate-100 p-4">
     <div class="mockup-phone">
       <div class="mockup-phone-camera"></div>
-      <div class="mockup-phone-display bg-white p-6 flex flex-col justify-start gap-6">
-          
+      <div class="mockup-phone-display bg-white p-6 flex flex-col justify-start gap-6 overflow-y-auto">
 
-        <!-- Account Login Section Up -->
-        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto">
+        <!--  mobile -->
+        <div class="card bg-base-100 w-full max-w-sm shadow-2xl mx-auto">
           <div class="card-body">
-                       <div class="divider text-red-400"></div>
 
-        <!-- Account Money Section Below -->
-        <div class="stats shadow text-black">
-          <div class="stat">
-            <div class="stat-title text-2xl  text-red-500 text-center mt-4">Total Balance</div>
-            <div id="amount" class="stat-value text-center text-3xl font-bold">9400</div>
-          </div>
-        </div>
+            <!-- Total Balance -->
+            <div class="stats shadow text-black">
+              <div class="stat">
+                <div class="stat-title text-2xl text-red-500 text-center mt-4">Total Balance</div>
+                <div id="amount" class="stat-value text-center text-3xl font-bold">9400</div>
+              </div>
+            </div>
 
-        <!-- Buttons with gap -->
-        <div class="flex flex-col gap-3 mb-6 px-8 hidd">
-          <button class="btn btn-success">Add Money</button>
-          <button class="btn btn-error">Cash Out</button>
-        </div>
-            <fieldset class="fieldset mt-10 ">
-              <label class="label font-semibold ">Money</label>
+            <!-- Add & Cash Out Buttons -->
+            <div class="flex flex-col gap-3 mt-6 px-4">
+              <button id="btn-Add-Money" class="btn btn-success">Add Money</button>
+              <button id="btn-Cash-out" class="btn btn-error">Cash Out</button>
+            </div>
+
+            <!-- Add Money Section -->
+                <fieldset id="Show-Add-Money" class="fieldset mt-10">
+              <label class="label font-semibold">Money</label>
+              <input id="MoneyAdd" type="number" class="input input-bordered w-full" placeholder="Enter Money" />
+              <label class="label font-semibold mt-4">Pin Number</label>
+              <input id="PinSet" type="password" class="input input-bordered w-full" placeholder="Enter PIN" />
+                        <button id="Cash-Out" class="btn-secondary mt-6 w-full text-2xl py-3 rounded-lg bg-green-400 transition-colors">
+               Add Money
+              </button>
+                </fieldset>
+
+            <!-- Cash out Section -->
+  
+        <fieldset id="cash-out-hidden" class="fieldset mt-10 hidden">
+              <label class="label font-semibold">Money</label>
               <input id="Cash-MoneyAdd" type="number" class="input input-bordered w-full" placeholder="Enter Money" />
-              <label class="label font-semibold mt-4  ">Pin Number</label>
+              <label class="label font-semibold mt-4">Pin Number</label>
               <input id="Cash-Pin" type="password" class="input input-bordered w-full" placeholder="Enter PIN" />
-              <button id="Cash-Out" class="btn btn-neutral mt-6 w-full text-2xl">Cash out</button>
+          <button id="Cash-Out" class="btn-secondary mt-6 w-full text-2xl py-3 rounded-lg bg-red-400 transition-colors">
+            Cash Out
+          </button>
+
             </fieldset>
           </div>
-          
         </div>
+
       </div>
     </div>
-            <fieldset class="fieldset mt-10 hidden">
-              <label class="label font-semibold ">Money</label>
-              <input id="MoneyAdd" type="number" class="input input-bordered w-full" placeholder="Enter Money" />
-              <label class="label font-semibold mt-4  ">Pin Number</label>
-              <input id="PinSet" type="password" class="input input-bordered w-full" placeholder="Enter PIN" />
-              <button id="Add-Money" class="btn btn-neutral mt-6 w-full text-2xl">Add Money</button>
-            </fieldset>
-          </div>
-          
-        </div>
-<!-- cash out section start -->
- <!-- cs -->
-
   </main>
+
+  <!--  JavaScript -->
   <script src="js/cash.js"></script>
   <script src="js/bu.js"></script>
+  <script src="js/feature.js"></script>
 </body>
 </html>
