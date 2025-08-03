@@ -9,7 +9,7 @@
 </head>
 <body class="w-full">
   <main class="flex justify-center items-center min-h-screen bg-slate-100 p-4">
-    <div class="mockup-phone">
+    <div class="mockup-phone">  
       <div class="mockup-phone-camera"></div>
       <div class="mockup-phone-display bg-white p-6 flex flex-col justify-start gap-6 overflow-y-auto">
 
@@ -21,7 +21,7 @@
             <div class="stats shadow text-black">
               <div class="stat">
                 <div class="stat-title text-2xl text-red-500 text-center mt-4">Total Balance</div>
-                <div id="amount" class="stat-value text-center text-3xl font-bold">9400</div>
+                <div id="amount" class="stat-value text-center text-3xl font-bold">10000</div>
               </div>
             </div>
 
@@ -29,6 +29,9 @@
             <div class="flex flex-col gap-3 mt-6 px-4">
               <button id="btn-Add-Money" class="btn btn-success">Add Money</button>
               <button id="btn-Cash-out" class="btn btn-error">Cash Out</button>
+              <button id="btn-Add-Money" class="btn btn-success">mobile Reserge</button>
+            
+
             </div>
 
             <!-- Add Money Section -->
@@ -54,8 +57,19 @@
           </button>
 
             </fieldset>
+            <button id="bkas-login" class="btn bg-black text-white border-black">
+  <svg aria-label="Bkas logo" width="16" height="12" viewBox="0 0 300 271" xmlns="http:"><path fill="currentColor" d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"/></svg>
+  Log-Out Bkas
+</button>
+
           </div>
+          <!-- bkas login -->
         </div>
+<div id="bkas-login" style="display: flex; justify-content: center; align-items: center; height: 100px; color: #E2136E;">
+  <svg width="80" height="60" viewBox="0 0 300 271" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"/>
+  </svg>
+</div>
 
       </div>
     </div>
@@ -63,6 +77,8 @@
   </main>
 
   <!--  JavaScript -->
+    <script src="js/bkas.js"></script>
+  <script src="js/mobile.js"></script>
   <script src="js/cash.js"></script>
   <script src="js/bu.js"></script>
   <script src="js/feature.js"></script>
